@@ -1,9 +1,13 @@
-name: First Workflow
-on: [push]
+name: my first github actions
+
+on:
+  push: 
+   branches: [main]
+
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Run a one-line script
-        run: echo "Hello, world! This is my first GitHub Actions execution."
+    build:
+      runs-on: ubuntu-latest
+
+      steps:
+        - name: print helo gitac
+          run: echo "Hello github actions"
